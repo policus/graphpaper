@@ -1,0 +1,75 @@
+// Imports from Compass core
+@import "compass/utilities/general/float"
+@import "compass/utilities/general/clearfix"
+
+// Default grid settings (change these in your project's config/_settings.sass file)
+$graphpaper_columns: 12
+$graphpaper_column_width: 72px
+$graphpaper_column_margin: 14px
+$graphpaper_grid_padding: 3px
+
+$graphpaper_default_border_color: #CCC
+
+// Calculated values (don't manually set these)
+$graphpaper_column_outer_width: $graphpaper_column_width + $graphpaper_column_margin
+$graphpaper_grid_width: ($graphpaper_column_outer_width * $graphpaper_columns) - $graphpaper_column_margin
+
+// Mixins
+=column_span($n)
+    width: ($graphpaper_column_width * $n) + ($graphpaper_column_margin * ($n - 1))
+
+=grid_container($center: true)
+    // Use this in elements that you want to contain a grid.
+    // Set the center argument to false if you want to align the grid to the left
+    position: relative
+    display: block
+    width: $graphpaper_grid_width
+    @if $center
+        margin: 0px auto
+    +clearfix
+
+=container
+    // For use in elements that contain columns
+    display: block
+    width: 100%
+    +clearfix
+
+=last
+    // Used to remove the right margin on the last column in a container
+    // As soon as IE implements the last-child psuedoselector, you won't
+    // have to worry about manually adding it; until then, mix it into your
+    // element after you've used the column mixin.
+    margin-right: 0
+
+=column($n: 1)
+    // Use to specify an element as spanning $n columns in a grid
+    +float('left')
+    +column_span($n)
+    margin-right: $graphpaper_column_margin
+    &:last-child
+        +last
+
+=prepend($n: 1)
+    // Add padding to the left of an element that spans $n columns
+    padding-left: $graphpaper_column_outer_width * $n
+
+=append($n: 1)
+    // Add padding to the right of an element that spans $n columns
+    padding-right: $graphpaper_column_outer_width * $n
+
+=push($n: 1)
+    // Similar to prepend, but uses margin instead of padding
+    +float('left')
+    margin-left: $graphpaper_column_outer_width * $n
+
+=pull($n: 1)
+    // Pulls an element $n columns to the left by using a negative margin
+    +float('left')
+    margin-left: ($graphpaper_column_outer_width * $n) * -1
+
+=column_border($border_color: $graphpaper_default_border_color, $border_width: 1px, $border_style: 'solid')
+    // By default adds a 1px border to the right of a column with the color 
+    // specified by $graphpaper_default_border_color
+    padding-right: ($graphpaper_column_margin / 2) - 1
+    margin-right: $graphpaper_column_margin / 2
+    border-right: $border_width $border_style $border_color
