@@ -1,0 +1,28 @@
+{% extends "home/base.html" %}
+
+{% block html_title %}Sassle up on the magic pony{% endblock %}
+
+{% block body_id %}welcome{% endblock %}
+
+{% block page_content %}
+    <div id="welcome_content">
+        <div id="whats_next">
+            <h2>Working with Sassle</h2>
+            <p>
+                Working with Sassle is just like working on any other Django project
+                except you can now use compass to compile SASS files from your 
+                media/sass directory. Sassle uses a common sense naming and flexible inclusion
+                conventions to help you start building maintainable projects quickly.
+            </p>
+        </div>
+    
+        <div id="related_projects">
+            <h3>Sassle is made possible by the following projects:</h3>
+            <ul id="project_list">
+                <li><a href="http://github.com/chriseppstein/compass">Compass</a></li>
+                <li><a href="http://sass-lang.com">SASS</a></li>
+                <li><a href="http://djangoproject.com">Django</a></li>
+            </ul> 
+        </div>
+    </div>
+{% endblock %}
