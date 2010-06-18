@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.0.31"
-  s.date = "2010-06-14"
+  s.version = "0.1.0"
+  s.date = "2010-06-17"
 
   # Gem Details
   s.name = "graphpaper"
