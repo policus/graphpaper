@@ -1,9 +1,9 @@
 # compass-graphpaper
 
-Graphpaper is a Compass extension that creates a flexible Django project 
-skeleton. It includes flexible html skeletons and a common sense naming 
-conventions that can be applied to most projects. It's intended to allow you 
-to run [compass watch](http://compass-style.org/docs/tutorials/command-line/) 
+Graphpaper is a Compass extension that creates a Django project 
+skeleton suitable for use with SASS. It includes flexible html skeletons and 
+common sense naming conventions that can be applied to most projects. It's 
+intended to allow you to run [compass watch](http://compass-style.org/docs/tutorials/command-line/) 
 alongside your development server providing a structured way to use SASS when 
 developing websites with Django.
 
