@@ -16,7 +16,7 @@ on using other frameworks and extensions.
     > git clone git@github.com:alexcabrera/compass-graphpaper.git
     > cd compass-graphpaper
     > gem build graphpaper.gemspec
-    > sudo gem install graphpaper-0.1.0.gem
+    > sudo gem install graphpaper-0.1.2.gem
 
 # Usage
 
@@ -24,7 +24,8 @@ Use the compass create command instead of djangoadmin.py to start a new
 project.
 
     > compass create projectname -r graphpaper --using graphpaper --force \
-      --sass-dir=media/sass --css-dir=media/stylesheets -x sass
+      --sass-dir=media/sass --css-dir=media/stylesheets \
+	  --image-dir=media/images -x sass
 
 __IMPORTANT:__ The above command modifies Compass's config.rb so that Django
 can find the stylesheets. Additionally, it changes the name of Compass's *src*

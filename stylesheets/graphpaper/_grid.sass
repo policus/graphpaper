@@ -1,20 +1,24 @@
 // Imports from Compass core
+
 @import "compass/utilities/general/float"
 @import "compass/utilities/general/clearfix"
 
-// Default grid settings (change these in your project's config/_settings.sass file)
-$graphpaper_columns: 12
-$graphpaper_column_width: 72px
-$graphpaper_column_margin: 14px
-$graphpaper_grid_padding: 3px
+// Default grid settings (change these in your project's config/_grid.sass file)
 
-$graphpaper_default_border_color: #CCC
+$graphpaper_columns: 12 !default
+$graphpaper_column_width: 72px !default
+$graphpaper_column_margin: 14px !default
+$graphpaper_grid_padding: 3px !default
+
+$graphpaper_default_border_color: #CCC !default
 
 // Calculated values (don't manually set these)
+
 $graphpaper_column_outer_width: $graphpaper_column_width + $graphpaper_column_margin
 $graphpaper_grid_width: ($graphpaper_column_outer_width * $graphpaper_columns) - $graphpaper_column_margin
 
 // Mixins
+
 =column_span($n)
     width: ($graphpaper_column_width * $n) + ($graphpaper_column_margin * ($n - 1))
 

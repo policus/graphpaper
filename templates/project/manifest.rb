@@ -5,7 +5,8 @@ stylesheet 'common/_base.sass'
 stylesheet 'common/_footer.sass'
 stylesheet 'common/_header.sass'
 stylesheet 'config/_colors.sass'
-stylesheet 'config/_settings.sass'
+stylesheet 'config/_grid.sass'
+stylesheet 'config/_typography.sass'
 
 # Load built-in django templates
 file 'templates/base.html'
