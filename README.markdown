@@ -16,7 +16,7 @@ on using other frameworks and extensions.
     > git clone git@github.com:alexcabrera/compass-graphpaper.git
     > cd compass-graphpaper
     > gem build graphpaper.gemspec
-    > sudo gem install graphpaper-0.1.2.gem
+    > sudo gem install graphpaper-0.1.6.gem
 
 # Usage
 
@@ -52,5 +52,4 @@ local_settings.py. That's confusing; just copy/paste the code below.
 You'll also want to change your ROOT_URLCONF (line 42 in settings.py) to point
 to your project's root urls; unless of course your project's name is 
 *projectname*, in which case it's either a really cool or really boring 
-project. While you're add it, create a new SECRET_KEY (line 25 in settings.py)
-unless you want people hacking your gibson.
+project. While you're add it, create a new SECRET_KEY (line 25 in settings.py).

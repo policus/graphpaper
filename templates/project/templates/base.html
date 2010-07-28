@@ -3,14 +3,16 @@
     <head>
         <title>{% block html_title %}Default Magic Pony Template{% endblock %}</title>
         <link rel="stylesheet" href="{{ MEDIA_URL }}/stylesheets/screen.css" type="text/css" media="screen">
-        
+        <script type="text/javascript" src="{{ MEDIA_URL }}/javascript/jquery-1.4.2.min.js"></script>
         {% block extra_stylesheets %}{% endblock %}
         {% block extra_javascript %}{% endblock %}
     </head>
     <body id="{% block body_id %}page{% endblock %}" class="{% block body_class %}class{% endblock %}" onload="{% block body_onload %}{% endblock %}">
         {% block site_header %}
-            {% include "partials/global_navigation.html" %}
-        {% endblock %}
+			<div id="site_header">
+            	{% include "partials/global_navigation.html" %}
+        	</div>
+		{% endblock %}
         
         {% block page_header %}{% endblock %}
         {% block page_content %}{% endblock %}

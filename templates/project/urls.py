@@ -7,7 +7,7 @@ from django.conf import settings
 # admin.autodiscover()
     
 urlpatterns = patterns('',
-    url(r'^$', direct_to_template, {'template':'home/index.html'}, name="home_page"),
+    url(r'^$', direct_to_template, {'template':'home/welcome.html'}, name="home_page"),
 )
 
 # Django's built-in development server should handle static media when developing

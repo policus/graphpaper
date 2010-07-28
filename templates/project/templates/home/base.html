@@ -4,18 +4,15 @@
 
 {% block page_header %}
     <div id="welcome_header">
-        <h1 id="welcome_message">Good work!</h1>
-        <p id="welcome_copy">
-            You've successfully created a project with compass-sassle.
-        </p>
+        <h1 id="welcome_message">Graphpaper Project Ready</h1>
+        <h2 id="welcome_tagline">
+        	Follow the directions below to get started
+        </h2>
     </div>
 {% endblock %}
 
 {% block page_footer %}
     <div id="page_footer">
-        <ul id="credits">
-            <li>Written &amp; Maintained by: Alex Cabrera</li>
-            <li>django.wsgi config by: Joonas Bergius</li>
-        </ul>
+    	<img src="{{ MEDIA_URL }}/images/policus_logo.png" alt="built by Policus">
     </div>
 {% endblock %}

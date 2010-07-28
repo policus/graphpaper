@@ -1,0 +1,5 @@
+.DS_Store
+*.pyc
+*.db
+local_settings.py
+.sass-cache/*

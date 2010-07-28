@@ -1,22 +1,21 @@
 // Don't write styles directly in this file, import from other sources
 
 // set configuration options and constants
-
 @import config/grid
 @import config/colors
 @import config/typography
 
 // import compass and graphpaper libraries
-
 @import compass
 @import graphpaper
 
 // import common files
-
-@import common/base
+@import common/site
 @import common/header
 @import common/footer
 
 // import page classes
-
 @import classes/home
+
+// override styles to indicate page state
+@import common/states

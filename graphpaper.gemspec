@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.1.2"
-  s.date = "2010-07-15"
+  s.version = "0.1.6"
+  s.date = "2010-07-28"
 
   # Gem Details
   s.name = "graphpaper"
@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.summary = %q{A Compass extension for creating a Django project skeleton}
   s.description = %q{This compass extension create a Django project skeleton including a lightweight fixed-width grid system and flexible HTML Django templates}
   s.email = "alex@policus.com"
-  s.homepage = "http://alexcabrera.me/"
+  s.homepage = "http://policus.com/"
 
   # Gem Files
   s.files = %w(README.markdown)
@@ -23,6 +23,8 @@ Gem::Specification.new do |s|
   s.files += Dir.glob("templates/project/templates/*.*")
   s.files += Dir.glob("templates/project/templates/**/*.*")
   s.files += Dir.glob("templates/project/apps/*.*")
+  s.files += Dir.glob("templates/project/media/images/*.*")
+  s.files += Dir.glob("templates/project/media/javascript/jquery-1.4.2.min.js")
   
   # Gem Bookkeeping
   s.has_rdoc = false

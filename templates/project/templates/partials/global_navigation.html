@@ -1,6 +1,8 @@
-<!-- Uncomment this if you want to use a global header
+{# 
+	Include this file where you want the site navigation to appear.
+	By default, it's included in templates/base.html inside of #site_header
+#}
 
-    <ul id="global_navigation">
-        <li id="home_nav_item" class="nav_item"><a href="{% url home_page %}">Home</a></li>
-    </ul>
--->
+<ul id="global_navigation">
+	<li id="home_nav_item" class="nav_item"><a href="{% url home_page %}">Home</a></li>
+</ul>
