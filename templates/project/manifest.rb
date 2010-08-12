@@ -1,5 +1,5 @@
 # Load files for SASS stylesheet authoring
-stylesheet 'screen.sass', :media => 'screen'
+stylesheet '960.sass', :media => 'screen'
 stylesheet 'classes/_home.sass'
 stylesheet 'common/_site.sass'
 stylesheet 'common/_footer.sass'

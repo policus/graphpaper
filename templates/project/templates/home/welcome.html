@@ -1,57 +1,12 @@
 {% extends "home/base.html" %}
 
-{% block html_title %}Sassle up on the magic pony{% endblock %}
+{% block html_title %}Graphpaper Project Ready{% endblock %}
 
 {% block body_id %}welcome{% endblock %}
 
 {% block page_content %}
     <div id="welcome_content">
-        <ol id="graphpaper_checklist">
-			<li class="done">Create project with the following command</li>
-			<li class="done">
-				Configure settings.py
-				<ul>
-					<li>On line 25 enter a secure secret key</li>
-					<li>On line 42 modify the ROOT_URL conf to point to your urls.py file</li>
-				</ul>
-			</li>
-			<li class="done">
-				Create local_settings.py by copying local_settings_example.py
-				<span class="note">
-					You probably will want to instruct your VCS to ignore this file. If you
-					use git, it's already been added to this project's .gitignore file.
-				</span>
-			</li>
-			<li>
-				Configure django.wsgi for Apache+mod_wsgi deployments
-				<ul>
-					<li>On line 8 change projectname to the actual name of your project</li>
-					<li>On line 10 change projectname.settings to point to your settings file</li>
-				</ul>
-			</li>
-		</ol>
-    </div>
-	<div id="further_reading">
-		<h3>Graphpaper is made possible by the following projects</h3>
-		<ul id="related_projects">
-			<li>
-				<a href="http://compass-style.org">
-					<span class="project_name">Compass</span>
-					<span class="project_tagline">Whatever it is</span>
-				</a>
-			</li>
-			<li>
-				<a href="http://sass-lang.com">
-					<span class="project_name">SASS</span>
-					<span class="project_tagline">CSS with style</span>
-				</a>
-			</li>
-			<li>
-				<a href="http://djangoproject.com">
-					<span class="project_name">Django</span>
-					<span class="project_tagline">The web framework for perfectionists with deadlines</span>
-				</a>
-			</li>
-		</ul>
+		<h2>You're now ready to start building your site.</h2>
+		
 	</div>
 {% endblock %}
