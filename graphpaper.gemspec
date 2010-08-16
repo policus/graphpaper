@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.1.7"
-  s.date = "2010-08-12"
+  s.version = "0.1.8"
+  s.date = "2010-08-15"
 
   # Gem Details
   s.name = "graphpaper"
   s.authors = ["Alex Cabrera"]
   s.summary = %q{A Compass extension for creating a Django project skeleton}
-  s.description = %q{This compass extension create a Django project skeleton including a lightweight fixed-width grid system and flexible HTML Django templates}
+  s.description = %q{This compass extension create a Django project skeleton including a lightweight fixed-width grid system based on 960.gs, a flexible HTML Django templates, and integrates HTML5 Boilerplate}
   s.email = "alex@policus.com"
   s.homepage = "http://policus.com/"
 

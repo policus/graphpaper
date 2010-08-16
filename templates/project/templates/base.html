@@ -1,23 +1,52 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>{% block html_title %}Default Magic Pony Template{% endblock %}</title>
-        <link rel="stylesheet" href="{{ MEDIA_URL }}/stylesheets/960.css" type="text/css" media="screen">
-        <script type="text/javascript" src="{{ MEDIA_URL }}/javascript/jquery-1.4.2.min.js"></script>
-        {% block extra_stylesheets %}{% endblock %}
-        {% block extra_javascript %}{% endblock %}
-    </head>
-    <body id="{% block body_id %}page{% endblock %}" class="{% block body_class %}class{% endblock %}" onload="{% block body_onload %}{% endblock %}">
-        {% block site_header %}
-			<div id="site_header">
-            	{% include "partials/global_navigation.html" %}
-        	</div>
-		{% endblock %}
-        
-        {% block page_header %}{% endblock %}
-        {% block page_content %}{% endblock %}
-        {% block page_footer %}{% endblock %}
-        
-        {% block side_footer %}{% endblock %}
-    </body>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]><![endif]-->
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+	
+	<title>{% block html_title %}Default Magic Pony Template{% endblock %}</title>
+	
+	<!--  Mobile Viewport Fix
+		device-width : Occupy full width of the screen in its current orientation
+		initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+		maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
+	-->
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	
+	<link rel="shortcut icon" href="{{ MEDIA_URL }}/images/favicon.ico">
+	<link rel="apple-touch-icon" href="{{ MEDIA_URL }}/images/apple-touch-icon.png">
+	
+	<link rel="stylesheet" href="{{ MEDIA_URL }}/stylesheets/960.css" type="text/css" media="screen">
+	
+	<script src="{{ MEDIA_URL }}/javascript/modernizr-1.5.min.js"></script>
+
+</head>
+<!--[if IE 7 ]><body id="{% block body_id %}{% endblock %}" class="ie7 {% block body_class %}{% endblock %}"><![endif]-->
+<!--[if IE 8 ]><body id="{% block body_id %}{% endblock %}" class="ie8 {% block body_class %}{% endblock %}"><![endif]-->
+<!--[if IE 9 ]><body id="{% block body_id %}{% endblock %}" class="ie9 {% block body_class %}{% endblock %}"><![endif]-->
+<!--[if gt IE 9 ]><body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}"><![endif]-->
+<!--[if !IE]><!-->
+<body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}" onload="{% block body_onload %}{% endblock %}">
+<!--<![endif]-->
+
+	{% block site_header %}
+		<div id="site_header">
+			{% include "partials/global_navigation.html" %}
+		</div>
+	{% endblock %}
+
+	{% block page_header %}{% endblock %}
+	{% block page_content %}{% endblock %}
+	{% block page_footer %}{% endblock %}
+
+	{% block side_footer %}{% endblock %}
+
+	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script>!window.jQuery && document.write('<script src="{{ MEDIA_URL }}/javascript/jquery-1.4.2.min.js"><\/script>')</script>
+
+	<script src="{{ MEDIA_URL }}/javascript/plugins.js"></script>
+
+   </body>
 </html>

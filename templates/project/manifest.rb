@@ -14,6 +14,9 @@ file 'templates/base.html'
 file 'templates/partials/global_navigation.html'
 file 'templates/home/base.html'
 file 'templates/home/welcome.html'
+file 'templates/robots.txt'
+file 'templates/404.html'
+file 'templates/500.html'
 
 # Create common django files
 file 'apps/__init__.py'
@@ -27,6 +30,9 @@ file 'django.wsgi'
 file '__init__.py'
 file 'media/images/policus_logo.png'
 file 'media/javascript/jquery-1.4.2.min.js'
+file 'media/javascript/modernizr-1.5.min.js'
+file 'media/javascript/plugins.js'
+
 
 welcome_message %Q{
 

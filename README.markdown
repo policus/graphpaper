@@ -53,3 +53,34 @@ You'll also want to change your ROOT_URLCONF (line 42 in settings.py) to point
 to your project's root urls; unless of course your project's name is 
 *projectname*, in which case it's either a really cool or really boring 
 project. While you're add it, create a new SECRET_KEY (line 25 in settings.py).
+
+# Notes on HTML5 Boilerplate Integration #
+
+Graphpaper bakes a lot of the goodness from [HTML5 Boilerplate](http://html5boilerplate.com).
+by Paul Irish. I ripped out most of the IE6 compatibility stuff because, well,
+we should all try to put that ugliness behind us.
+
+# Template Structure #
+
+Graphpaper uses a pretty flexible site structure and naming conventions that
+should work for most projects. It's set up as follows:
+	
+	site_header - Stuff like branding and global navigation
+	page_header - Class-specific header
+	page_content - The content of individual pages
+	page_footer - Class-sepecific footer
+	site_footer - Site-wide footer
+
+It's suggested you create a new directory under templates/ for each page class
+in your site. Page classes are the different "sections" of your site for lack
+of a better work. In Django they generally map to site-specific apps. Class
+directories should include a base.html file which extends templates/base.html
+and then each view that needs a template should extend that class's base.html
+file. 
+
+A class's base.html must override the *body_class* block. It's also a good 
+idea to override *page_header* and *page_footer* if it's shared throughout the
+class. 
+
+Individual views must override the *body_id* and should override 
+*page_content*. 
