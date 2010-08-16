@@ -83,4 +83,4 @@ idea to override *page_header* and *page_footer* if it's shared throughout the
 class. 
 
 Individual views must override the *body_id* and should override 
-*page_content*. 
+*page_content* (assuming you actually want to display unique page content).
