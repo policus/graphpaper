@@ -27,6 +27,11 @@ project.
       --sass-dir=media/sass --css-dir=media/stylesheets \
 	  --image-dir=media/images -x sass
 
+Or, just copy *graphpaper.sh* somewhere in your path and create a new project 
+like this:
+
+	> graphpaper projectname
+
 __IMPORTANT:__ The above command modifies Compass's config.rb so that Django
 can find the stylesheets. Additionally, it changes the name of Compass's *src*
 directory the more sensible *sass* and places it in the media directory. Most

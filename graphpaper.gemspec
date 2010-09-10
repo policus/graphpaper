@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.1.8"
-  s.date = "2010-08-15"
+  s.version = "0.1.16"
+  s.date = "2010-08-26"
 
   # Gem Details
   s.name = "graphpaper"
@@ -16,16 +16,22 @@ Gem::Specification.new do |s|
   s.files += Dir.glob("lib/*.*")
   s.files += Dir.glob("stylesheets/*.*")
   s.files += Dir.glob("stylesheets/graphpaper/*.*")
-  s.files += Dir.glob("templates/project/*.*")
-  s.files += Dir.glob("templates/project/classes/*.*")
-  s.files += Dir.glob("templates/project/common/*.*")
-  s.files += Dir.glob("templates/project/config/*.*")
-  s.files += Dir.glob("templates/project/templates/*.*")
-  s.files += Dir.glob("templates/project/templates/**/*.*")
-  s.files += Dir.glob("templates/project/apps/*.*")
-  s.files += Dir.glob("templates/project/media/images/*.*")
-  s.files += Dir.glob("templates/project/media/javascript/jquery-1.4.2.min.js")
-  
+  s.files += Dir.glob("templates/django/*.*")
+  s.files += Dir.glob("templates/django/classes/*.*")
+  s.files += Dir.glob("templates/django/common/*.*")
+  s.files += Dir.glob("templates/django/config/*.*")
+  s.files += Dir.glob("templates/django/templates/*.*")
+  s.files += Dir.glob("templates/django/templates/**/*.*")
+  s.files += Dir.glob("templates/django/apps/*.*")
+  s.files += Dir.glob("templates/django/media/images/*.*")
+  s.files += Dir.glob("templates/django/media/javascript/*.*")
+  s.files += Dir.glob("templates/boilerplate/*.*")
+  s.files += Dir.glob("templates/boilerplate/classes/*.*")
+  s.files += Dir.glob("templates/boilerplate/common/*.*")
+  s.files += Dir.glob("templates/boilerplate/config/*.*")
+  s.files += Dir.glob("templates/boilerplate/media/images/*.*")
+  s.files += Dir.glob("templates/boilerplate/media/javascript/*.*")  
+
   # Gem Bookkeeping
   s.has_rdoc = false
   s.rubygems_version = %q{1.3.6}
